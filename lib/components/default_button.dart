@@ -11,28 +11,40 @@ class DefaultButton extends StatelessWidget {
   /// Action of button when it pressed
   final Function() press;
 
+  /// Height of button
+  final double buttonHeiht;
+
+  /// Border radius of button
+  final double buttonBorderRadius;
+
+  /// Width of text
+  final double textWidth;
+
   /// Constructor
   const DefaultButton({
     super.key,
     required this.text,
     required this.press,
+    this.buttonHeiht = 56,
+    this.buttonBorderRadius = 20,
+    this.textWidth = 18,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: getProportionateScreenHeight(56),
+      height: getProportionateScreenHeight(buttonHeiht),
       width: double.infinity,
       child: FloatingActionButton(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(buttonBorderRadius),
         ),
         backgroundColor: kPrimaryColor,
         onPressed: press,
         child: Text(
           text,
           style: TextStyle(
-            fontSize: getProportionateScreenWidth(18),
+            fontSize: getProportionateScreenWidth(textWidth),
             color: Colors.white,
           ),
         ),

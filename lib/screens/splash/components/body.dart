@@ -14,6 +14,8 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
+  final double mainElementWigth = 20;
+
   int currentPage = 0;
 
   List<Map<String, String>> splashData = [
@@ -59,7 +61,7 @@ class _BodyState extends State<Body> {
               flex: 2,
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                  horizontal: getProportionateScreenWidth(20),
+                  horizontal: getProportionateScreenWidth(mainElementWigth),
                 ),
                 child: Column(
                   children: [
