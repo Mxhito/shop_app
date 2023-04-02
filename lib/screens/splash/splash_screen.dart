@@ -1,12 +1,13 @@
-// ignore_for_file: public_member_api_docs
-
 import 'package:flutter/material.dart';
 import 'package:shop_app/screens/splash/components/body.dart';
 import 'package:shop_app/size_config.dart';
 
+/// Splash Screen
 class SplashScreen extends StatelessWidget {
+  /// Route name
   static const String routeName = '/splash';
 
+  /// Constructor
   const SplashScreen({super.key});
 
   @override
