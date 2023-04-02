@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shop_app/components/custom_suffix_icon.dart';
+import 'package:shop_app/components/custom_email_form_field.dart';
+import 'package:shop_app/components/custom_password_form_field.dart';
 import 'package:shop_app/components/default_button.dart';
 import 'package:shop_app/components/form_error.dart';
 import 'package:shop_app/constants.dart';
@@ -20,15 +21,37 @@ class _SignFormState extends State<SignForm> {
 
   @override
   Widget build(BuildContext context) {
+    final formData = Provider.of<SignFormData>(context);
+
     return Form(
       key: _formKey,
       child: Column(
         children: [
           const CustomEmailFormField(),
           SizedBox(
-            height: getProportionateScreenHeight(20),
+            height: getProportionateScreenHeight(30),
           ),
           const CustomPasswordFormField(),
+          SizedBox(
+            height: getProportionateScreenHeight(30),
+          ),
+          Row(
+            children: [
+              Checkbox(
+                value: formData.remember,
+                activeColor: kPrimaryColor,
+                onChanged: (value) {
+                  formData.isRemember(value: value);
+                },
+              ),
+              const Text('Remember me'),
+              const Spacer(),
+              const Text(
+                'Forgot Password',
+                style: TextStyle(decoration: TextDecoration.underline),
+              ),
+            ],
+          ),
           SizedBox(
             height: getProportionateScreenHeight(20),
           ),
@@ -41,6 +64,9 @@ class _SignFormState extends State<SignForm> {
               );
             },
           ),
+          SizedBox(
+            height: getProportionateScreenHeight(20),
+          ),
           DefaultButton(
             text: 'Continue',
             press: () {
@@ -50,71 +76,6 @@ class _SignFormState extends State<SignForm> {
             },
           ),
         ],
-      ),
-    );
-  }
-}
-
-/// Custom email form field
-class CustomEmailFormField extends StatelessWidget {
-  /// Construcror
-  const CustomEmailFormField({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final formData = Provider.of<SignFormData>(context);
-
-    return TextFormField(
-      keyboardType: TextInputType.emailAddress,
-      onSaved: (newValue) => formData.email = newValue ?? '',
-      onChanged: (value) {
-        if (value.isNotEmpty) {
-          formData.addError(kEmailNullError);
-        } else if (emailValidatorRegExp.hasMatch(value)) {
-          formData.removeError(kInvalidEmailError);
-        }
-
-        formData.email = value; // Update email variable
-      },
-      validator: (value) {
-        if (value == null || value.isEmpty) {
-          formData.addError(kEmailNullError);
-        } else if (emailValidatorRegExp.hasMatch(value)) {
-          formData.addError(kInvalidEmailError);
-        }
-
-        return null;
-      },
-      decoration: const InputDecoration(
-        labelText: 'Email',
-        hintText: 'Enter your email',
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSuffixIcon(
-          svgIcon: 'assets/icons/Mail.svg',
-        ),
-      ),
-    );
-  }
-}
-
-/// Custom password form field
-class CustomPasswordFormField extends StatelessWidget {
-  /// Constructor
-  const CustomPasswordFormField({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return TextFormField(
-      obscureText: true,
-      decoration: const InputDecoration(
-        labelText: 'Password',
-        hintText: 'Enter your password',
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSuffixIcon(
-          svgIcon: 'assets/icons/Lock.svg',
-        ),
       ),
     );
   }
@@ -157,6 +118,12 @@ class SignFormData extends ChangeNotifier {
   ///
   void removeError(String error) {
     errors.remove(error);
+    notifyListeners();
+  }
+
+  ///
+  void isRemember({bool? value}) {
+    remember = value;
     notifyListeners();
   }
 }

@@ -9,7 +9,7 @@ dart_code_metrics:
     - test/**
   rules:
     - no-magic-number:
-        allowed: [3.14, 100, 12, 1, 2, 3, 36, 265, 235, 56, 20, 18, 0, 14, 10]
+        allowed: [3.14, 100, 12, 1, 2, 3, 36, 265, 235, 56, 20, 18, 0, 14, 10, 30, 40]
         allow-only-once: true
     - newline-before-return
     - no-boolean-literal-compare
