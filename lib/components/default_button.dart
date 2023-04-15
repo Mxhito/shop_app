@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:shop_app/constants.dart';
-import 'package:shop_app/size_config.dart';
+import '../constants.dart';
+import '../size_config.dart';
 
 /// Default button of my app
 class DefaultButton extends StatelessWidget {
@@ -9,7 +9,7 @@ class DefaultButton extends StatelessWidget {
   final String text;
 
   /// Action of button when it pressed
-  final Function() press;
+  final VoidCallback press;
 
   /// Height of button
   final double buttonHeiht;
@@ -31,7 +31,7 @@ class DefaultButton extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(final BuildContext context) {
     return SizedBox(
       height: getProportionateScreenHeight(buttonHeiht),
       width: double.infinity,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
-import 'package:shop_app/screens/sign_in/components/sign_form.dart';
-import 'package:shop_app/size_config.dart';
+import '../screens/sign_in/components/sign_form.dart';
+import '../size_config.dart';
 
 /// Error form
 class FormError extends StatelessWidget {
@@ -16,7 +16,7 @@ class FormError extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(final BuildContext context) {
     final signFormData = Provider.of<SignFormData>(context, listen: false);
 
     /// Svg picture size
@@ -25,7 +25,7 @@ class FormError extends StatelessWidget {
     return Column(
       children: List.generate(
         signFormData.errors.length,
-        (index) => Row(
+        (final index) => Row(
           children: [
             SvgPicture.asset(
               'assets/icons/Error.svg',

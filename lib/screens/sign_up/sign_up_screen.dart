@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'components/body.dart';
 
-/// Sign in screen
-class SignInScreen extends StatelessWidget {
+/// Sign Up screen
+class SignUpScreen extends StatelessWidget {
   /// Route name
-  static const String routeName = '/sign_in';
+  static const String routeName = '/sign_up';
 
   /// Constructor
-  const SignInScreen({super.key});
+  const SignUpScreen({super.key});
 
   @override
   Widget build(final BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sign In'),
+        title: const Text('Sign Up'),
         centerTitle: true,
       ),
       body: const Body(),

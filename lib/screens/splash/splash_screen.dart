@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/screens/splash/components/body.dart';
-import 'package:shop_app/size_config.dart';
+
+import '../../size_config.dart';
+import 'components/body.dart';
 
 /// Splash Screen
 class SplashScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(final BuildContext context) {
     //* You have to call it on your starting screen
     SizeConfig().init(context);
 

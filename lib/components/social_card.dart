@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shop_app/size_config.dart';
+import '../size_config.dart';
 
 /// Auth with social media
 class SocialCard extends StatelessWidget {
   /// Icon
   final String icon;
+
   /// On press
-  final Function() press;
+  final VoidCallback press;
 
   /// Constructor
   const SocialCard({
@@ -17,7 +18,7 @@ class SocialCard extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(final BuildContext context) {
     return GestureDetector(
       onTap: press,
       child: Container(

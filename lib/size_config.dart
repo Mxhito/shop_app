@@ -8,8 +8,14 @@ class SizeConfig {
   static double? _defaultSize;
   static Orientation? _orientation;
 
+  /// Getter of screen width
+  static double get screenWidth => _screenWidth ?? 0.0;
+
+  /// Getter of screen width
+  static double get screenHeight => _screenHeight ?? 0.0;
+
   /// Initialize fields
-  void init(BuildContext context) {
+  void init(final BuildContext context) {
     _mediaQueryData = MediaQuery.of(context);
     _screenWidth = _mediaQueryData?.size.width;
     _screenHeight = _mediaQueryData?.size.height;
@@ -18,7 +24,7 @@ class SizeConfig {
 }
 
 /// Get the proportionate height as per screen size
-double getProportionateScreenHeight(double inputHeight) {
+double getProportionateScreenHeight(final double inputHeight) {
   /// 812 is the layout height that designer use
   const double designerHeigth = 812.0;
 
@@ -28,7 +34,7 @@ double getProportionateScreenHeight(double inputHeight) {
 }
 
 /// Get the proportionate height as per screen size
-double getProportionateScreenWidth(double inputWidth) {
+double getProportionateScreenWidth(final double inputWidth) {
   /// 375 is the layout width that designer use
   const double designerWidth = 375.0;
 

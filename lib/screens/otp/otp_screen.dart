@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'components/body.dart';
 
-/// Sign in screen
-class SignInScreen extends StatelessWidget {
+/// OTP screen
+class OtpScreen extends StatelessWidget {
   /// Route name
-  static const String routeName = '/sign_in';
+  static const String routeName = '/otp';
 
   /// Constructor
-  const SignInScreen({super.key});
+  const OtpScreen({super.key});
 
   @override
   Widget build(final BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sign In'),
+        title: const Text('OTP Verification'),
         centerTitle: true,
       ),
       body: const Body(),

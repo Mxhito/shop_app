@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/constants.dart';
-import 'package:shop_app/size_config.dart';
+import '../../../constants.dart';
+import '../../../size_config.dart';
 
 /// Splash content with info and images
 class SplashContent extends StatelessWidget {
@@ -30,7 +30,7 @@ class SplashContent extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(final BuildContext context) {
     return Column(
       children: [
         const Spacer(),

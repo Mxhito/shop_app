@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shop_app/constants.dart';
+import 'constants.dart';
 
 /// App theme
 ThemeData theme() {

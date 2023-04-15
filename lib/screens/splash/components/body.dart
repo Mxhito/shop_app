@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/components/default_button.dart';
-import 'package:shop_app/constants.dart';
-import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
-import 'package:shop_app/screens/splash/components/splash_content.dart';
-import 'package:shop_app/size_config.dart';
+
+import '../../../components/default_button.dart';
+import '../../../constants.dart';
+import '../../../size_config.dart';
+import '../../sign_in/sign_in_screen.dart';
+import 'splash_content.dart';
 
 /// Body of the Splash Screen
 class Body extends StatefulWidget {
@@ -35,7 +36,7 @@ class _BodyState extends State<Body> {
   ];
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(final BuildContext context) {
     return SafeArea(
       child: SizedBox(
         width: double.infinity,
@@ -46,13 +47,13 @@ class _BodyState extends State<Body> {
               flex: 3,
               //* Widget for swiping splash screen
               child: PageView.builder(
-                onPageChanged: (value) {
+                onPageChanged: (final value) {
                   setState(() {
                     currentPage = value;
                   });
                 },
                 itemCount: splashData.length,
-                itemBuilder: (context, index) => SplashContent(
+                itemBuilder: (final context, final index) => SplashContent(
                   text: splashData[index]['text'] ?? '',
                   image: splashData[index]['image'] ?? '',
                 ),
@@ -71,7 +72,7 @@ class _BodyState extends State<Body> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: List.generate(
                         splashData.length,
-                        (index) => Dot(
+                        (final index) => Dot(
                           index: index,
                           isActive: currentPage == index,
                         ),
@@ -114,7 +115,7 @@ class Dot extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(final BuildContext context) {
     const double sizeFactor = 6;
     const double currentPageWigth = 20;
 
