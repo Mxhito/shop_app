@@ -7,7 +7,6 @@ import 'forgot_password_form.dart';
 
 /// Body of Forgot Password screen
 class Body extends StatelessWidget {
-  /// Constructor
   const Body({super.key});
 
   @override
@@ -33,7 +32,7 @@ class Body extends StatelessWidget {
                   ),
                 ),
                 const Text(
-                  'Please enter your email and we will send \n' 'you a link to return to your account',
+                  'Please enter your email and we will send \n you a link to return to your account',
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.1),

@@ -5,9 +5,7 @@ import '../../../constants.dart';
 import '../../../size_config.dart';
 import '../../home/home_screen.dart';
 
-///
 class OtpForm extends StatefulWidget {
-  ///
   const OtpForm({super.key});
 
   @override
@@ -15,29 +13,16 @@ class OtpForm extends StatefulWidget {
 }
 
 class _OtpFormState extends State<OtpForm> {
-  FocusNode? pin2FocusNode;
-  FocusNode? pin3FocusNode;
-  FocusNode? pin4FocusNode;
-
-  @override
-  void initState() {
-    super.initState();
-    pin2FocusNode = FocusNode();
-    pin3FocusNode = FocusNode();
-    pin4FocusNode = FocusNode();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    pin2FocusNode?.dispose();
-    pin3FocusNode?.dispose();
-    pin4FocusNode?.dispose();
-  }
-
-  void nextField(final String value, final FocusNode? focusNode) {
+  void checkField(final String value, final int index) {
+    final currentFocus = FocusScope.of(context);
     if (value.length == 1) {
-      focusNode?.requestFocus();
+      if (index <= 3) {
+        currentFocus.nextFocus();
+      } else {
+        currentFocus.unfocus();
+      }
+    } else if (value.isEmpty && index > 0) {
+      currentFocus.previousFocus();
     }
   }
 
@@ -53,56 +38,45 @@ class _OtpFormState extends State<OtpForm> {
               SizedBox(
                 width: getProportionateScreenWidth(60),
                 child: TextFormField(
-                  autofocus: true,
                   obscureText: true,
                   style: const TextStyle(fontSize: 24),
                   keyboardType: TextInputType.number,
                   textAlign: TextAlign.center,
                   decoration: otpInputDecoration,
-                  onChanged: (final value) {
-                    nextField(value, pin2FocusNode);
-                  },
+                  onChanged: (final value) => checkField(value, 0),
                 ),
               ),
               SizedBox(
                 width: getProportionateScreenWidth(60),
                 child: TextFormField(
-                  focusNode: pin2FocusNode,
                   obscureText: true,
                   style: const TextStyle(fontSize: 24),
                   keyboardType: TextInputType.number,
                   textAlign: TextAlign.center,
                   decoration: otpInputDecoration,
-                  onChanged: (final value) => nextField(value, pin3FocusNode),
+                  onChanged: (final value) => checkField(value, 1),
                 ),
               ),
               SizedBox(
                 width: getProportionateScreenWidth(60),
                 child: TextFormField(
-                  focusNode: pin3FocusNode,
                   obscureText: true,
                   style: const TextStyle(fontSize: 24),
                   keyboardType: TextInputType.number,
                   textAlign: TextAlign.center,
                   decoration: otpInputDecoration,
-                  onChanged: (final value) => nextField(value, pin4FocusNode),
+                  onChanged: (final value) => checkField(value, 2),
                 ),
               ),
               SizedBox(
                 width: getProportionateScreenWidth(60),
                 child: TextFormField(
-                  focusNode: pin4FocusNode,
                   obscureText: true,
                   style: const TextStyle(fontSize: 24),
                   keyboardType: TextInputType.number,
                   textAlign: TextAlign.center,
                   decoration: otpInputDecoration,
-                  onChanged: (final value) {
-                    if (value.length == 1) {
-                      pin4FocusNode?.unfocus();
-                      // Then you need to check is the code is correct or not
-                    }
-                  },
+                  onChanged: (final value) => checkField(value, 3),
                 ),
               ),
             ],

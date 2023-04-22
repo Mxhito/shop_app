@@ -6,7 +6,6 @@ import 'otp_form.dart';
 
 /// Body of OTP screen
 class Body extends StatelessWidget {
-  /// Construct
   const Body({super.key});
 
   @override
@@ -46,7 +45,8 @@ class Body extends StatelessWidget {
                     TweenAnimationBuilder(
                       tween: Tween(begin: 30.0, end: 0),
                       duration: const Duration(seconds: 30),
-                      builder: (final context, final value, final child) => Text(
+                      builder: (final context, final value, final child) =>
+                          Text(
                         '00:${value.toInt()}',
                         style: const TextStyle(color: kPrimaryColor),
                       ),

@@ -8,9 +8,7 @@ import '../../../components/no_account_text.dart';
 import '../../../size_config.dart';
 import '../../sign_in/components/sign_form.dart';
 
-/// Forgot password Form
 class ForgotPasswordForm extends StatefulWidget {
-  /// Constructor
   const ForgotPasswordForm({super.key});
 
   @override
@@ -26,7 +24,7 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
       key: _formKey,
       child: Column(
         children: [
-          const CustomPersonalDataFormField(),
+          const CustomPersonalDataFormField(isEmailField: true),
           SizedBox(
             height: getProportionateScreenHeight(30),
           ),
