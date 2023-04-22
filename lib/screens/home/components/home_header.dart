@@ -4,9 +4,7 @@ import '../../../size_config.dart';
 import 'icon_button_with_counter.dart';
 import 'search_field.dart';
 
-/// Home header
 class HomeHeader extends StatelessWidget {
-  ///
   const HomeHeader({
     super.key,
   });

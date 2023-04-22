@@ -8,8 +8,7 @@ import 'popular_products.dart';
 import 'special_offers.dart';
 
 /// Body of home screen
-class Body extends StatelessWidget {
-  ///
+class Body extends StatelessWidget {  
   const Body({super.key});
 
   @override

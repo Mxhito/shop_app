@@ -3,12 +3,9 @@ import 'package:flutter/material.dart';
 import '../../size_config.dart';
 import 'components/body.dart';
 
-/// Splash Screen
 class SplashScreen extends StatelessWidget {
-  /// Route name
   static const String routeName = '/splash';
 
-  /// Constructor
   const SplashScreen({super.key});
 
   @override

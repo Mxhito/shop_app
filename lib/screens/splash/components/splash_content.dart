@@ -2,24 +2,13 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
-/// Splash content with info and images
 class SplashContent extends StatelessWidget {
-  /// Text of Splash Screen
   final String text;
-
-  /// Image of Splash Screen
   final String image;
-
-  /// Width of text
   final double textWidth;
-
-  /// Height of image
   final double imageHeigth;
-
-  /// Width of image
   final double imageWidth;
 
-  /// Constructor
   const SplashContent({
     super.key,
     required this.text,

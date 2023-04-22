@@ -2,31 +2,15 @@ import 'package:flutter/material.dart';
 
 /// Product model
 class Product {
-  ///
   final String title;
-
-  ///
   final String description;
-
-  ///
   final List<String> images;
-
-  ///
   final List<Color> colors;
-
-  ///
   final double rating;
-
-  ///
   final double price;
-
-  ///
   final bool isFavourite;
-
-  ///
   final bool isPopular;
 
-  ///
   const Product({
     required this.images,
     required this.colors,
@@ -39,7 +23,7 @@ class Product {
   });
 }
 
-/// Our demo Products
+/// Demo Products
 const List<Product> demoProducts = [
   Product(
     images: [
@@ -112,6 +96,5 @@ const List<Product> demoProducts = [
   ),
 ];
 
-///
 const String description =
     "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …";

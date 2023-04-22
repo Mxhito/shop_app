@@ -10,9 +10,7 @@ import '../../../size_config.dart';
 import '../../forgot_password/forgot_password_screen.dart';
 import '../../login_success/login_success_screen.dart';
 
-/// Sign In form
 class SignForm extends StatefulWidget {
-  /// Constructor
   const SignForm({super.key});
 
   @override
@@ -82,46 +80,24 @@ class _SignFormState extends State<SignForm> {
 
 /// State of Sign Form
 class SignFormData extends ChangeNotifier {
-  /// Variables
+  //* Variables
   String? email;
-
-  ///
   String? firstName;
-
-  ///
   String? secondName;
-
-  ///
   String? phone;
-
-  ///
   String? address;
-
-  ///
   String? password;
-
-  ///
   String? confirmPassword;
-
-  ///
   bool? remember = false;
-
-  ///
   List<String> errors = [];
 
-  /// Getters
+  //* Getters
   String? get getEmail => email;
-
-  ///
   String? get getPassword => password;
-
-  ///
   bool? get getRemember => remember;
-
-  ///
   List<String>? get getErrors => errors;
 
-  ///
+  //* Setters with alert
   void addError({required final String error}) {
     if (!errors.contains(error)) {
       errors.add(error);
@@ -129,13 +105,11 @@ class SignFormData extends ChangeNotifier {
     }
   }
 
-  ///
   void removeError({required final String error}) {
     errors.remove(error);
     notifyListeners();
   }
 
-  ///
   void isRemember({final bool? value}) {
     remember = value;
     notifyListeners();

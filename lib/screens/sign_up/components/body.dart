@@ -8,7 +8,6 @@ import 'sign_up_form.dart';
 
 /// Body of Sign Up screen
 class Body extends StatelessWidget {
-  /// Construct
   const Body({super.key});
 
   @override

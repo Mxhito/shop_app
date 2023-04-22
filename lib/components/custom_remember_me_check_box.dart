@@ -3,9 +3,7 @@ import 'package:provider/provider.dart';
 import '../constants.dart';
 import '../screens/sign_in/components/sign_form.dart';
 
-///
 class CustomRememberMeCheckBox extends StatefulWidget {
-  ///
   const CustomRememberMeCheckBox({super.key});
 
   @override

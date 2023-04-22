@@ -6,7 +6,6 @@ import '../../home/home_screen.dart';
 
 /// Body of the Login Success screen
 class Body extends StatelessWidget {
-  /// Constructor
   const Body({super.key});
 
   @override

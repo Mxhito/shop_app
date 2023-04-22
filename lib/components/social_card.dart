@@ -10,7 +10,6 @@ class SocialCard extends StatelessWidget {
   /// On press
   final VoidCallback press;
 
-  /// Constructor
   const SocialCard({
     super.key,
     required this.icon,

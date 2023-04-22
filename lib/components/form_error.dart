@@ -4,12 +4,10 @@ import 'package:provider/provider.dart';
 import '../screens/sign_in/components/sign_form.dart';
 import '../size_config.dart';
 
-/// Error form
 class FormError extends StatelessWidget {
   /// List of errors
   final List<String?> errors;
 
-  /// Constructor
   const FormError({
     super.key,
     required this.errors,

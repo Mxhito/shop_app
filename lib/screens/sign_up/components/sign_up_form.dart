@@ -9,9 +9,7 @@ import '../../../size_config.dart';
 import '../../complit_profile/complit_profile_screen.dart';
 import '../../sign_in/components/sign_form.dart';
 
-/// Sign Up form
 class SignUpForm extends StatefulWidget {
-  /// Constructor
   const SignUpForm({super.key});
 
   @override

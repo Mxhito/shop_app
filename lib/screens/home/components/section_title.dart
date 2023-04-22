@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../../size_config.dart';
 
-/// Secrion title
 class SectionTitle extends StatelessWidget {
-  ///
   final String text;
-
-  ///
   final GestureTapCallback press;
 
-  ///
   const SectionTitle({
     super.key,
     required this.text,

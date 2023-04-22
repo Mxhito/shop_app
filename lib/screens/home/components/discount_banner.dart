@@ -3,7 +3,6 @@ import '../../../size_config.dart';
 
 /// Home discount banner
 class DiscountBanner extends StatelessWidget {
-  ///
   const DiscountBanner({
     super.key,
   });

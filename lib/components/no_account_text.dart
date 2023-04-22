@@ -3,9 +3,7 @@ import '../constants.dart';
 import '../screens/sign_up/sign_up_screen.dart';
 import '../size_config.dart';
 
-/// No account text
 class NoAccountText extends StatelessWidget {
-  /// Constructor
   const NoAccountText({
     super.key,
   });

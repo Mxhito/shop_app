@@ -20,7 +20,6 @@ class DefaultButton extends StatelessWidget {
   /// Width of text
   final double textWidth;
 
-  /// Constructor
   const DefaultButton({
     super.key,
     required this.text,

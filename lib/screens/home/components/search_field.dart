@@ -4,7 +4,6 @@ import '../../../size_config.dart';
 
 /// Home search field
 class SearchField extends StatelessWidget {
-  ///
   const SearchField({
     super.key,
   });

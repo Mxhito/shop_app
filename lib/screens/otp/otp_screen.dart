@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'components/body.dart';
 
 class OtpScreen extends StatelessWidget {
-  /// Route name
   static const String routeName = '/otp';
 
   const OtpScreen({super.key});

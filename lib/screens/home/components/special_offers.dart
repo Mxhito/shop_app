@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../size_config.dart';
 import 'section_title.dart';
 
-///
 class SpecialOffers extends StatelessWidget {
-  ///
   const SpecialOffers({
     super.key,
   });
@@ -44,21 +42,12 @@ class SpecialOffers extends StatelessWidget {
   }
 }
 
-/// Special offer cadr
 class SpecialOfferCard extends StatelessWidget {
-  ///
   final String category;
-
-  ///
   final String image;
-
-  ///
   final int numOfBrands;
-
-  ///
   final GestureTapCallback press;
 
-  ///
   const SpecialOfferCard({
     super.key,
     required this.category,

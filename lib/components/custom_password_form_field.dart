@@ -5,16 +5,14 @@ import '../constants.dart';
 import '../screens/sign_in/components/sign_form.dart';
 import 'custom_suffix_icon.dart';
 
-/// Custom password form field
 class CustomPasswordFormField extends StatelessWidget {
-  /// Constructor
+  /// For build confirm password field
+  final bool isConfirmFild;
+
   const CustomPasswordFormField({
     super.key,
     this.isConfirmFild = false,
   });
-
-  /// For build confirm password field
-  final bool isConfirmFild;
 
   @override
   Widget build(final BuildContext context) {
@@ -34,15 +32,10 @@ class CustomPasswordFormField extends StatelessWidget {
   }
 }
 
-///
 class DefaultPasswordFormField extends StatelessWidget {
-  ///
   final SignFormData formData;
-
-  ///
   final int passwordNormalLenght;
 
-  ///
   const DefaultPasswordFormField({
     super.key,
     required this.formData,
@@ -90,13 +83,9 @@ class DefaultPasswordFormField extends StatelessWidget {
 
 ///
 class ConfirmPasswordFormField extends StatelessWidget {
-  ///
   final SignFormData formData;
-
-  ///
   final int passwordNormalLenght;
 
-  ///
   const ConfirmPasswordFormField({
     super.key,
     required this.formData,

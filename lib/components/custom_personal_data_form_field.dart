@@ -5,10 +5,13 @@ import '../constants.dart';
 import '../screens/sign_in/components/sign_form.dart';
 import 'custom_suffix_icon.dart';
 
-/// Custom personal data form field
 class CustomPersonalDataFormField extends StatelessWidget {
+  final bool isEmailField;
+  final bool isFirsNameFild;
+  final bool isSecondNameFild;
+  final bool isPhoneField;
+  final bool isAddressField;
 
-  /// Construcror
   const CustomPersonalDataFormField({
     super.key,
     this.isEmailField = false,
@@ -17,20 +20,6 @@ class CustomPersonalDataFormField extends StatelessWidget {
     this.isPhoneField = false,
     this.isAddressField = false,
   });
-  /// For build email field
-  final bool isEmailField;
-
-  /// For build first name field
-  final bool isFirsNameFild;
-
-  /// For build second name field
-  final bool isSecondNameFild;
-
-  /// For build phone field
-  final bool isPhoneField;
-
-  /// For build address field
-  final bool isAddressField;
 
   @override
   Widget build(final BuildContext context) {
@@ -52,16 +41,13 @@ class CustomPersonalDataFormField extends StatelessWidget {
   }
 }
 
-///
 class EmailFormField extends StatelessWidget {
+  final SignFormData formData;
 
-  ///
   const EmailFormField({
     super.key,
     required this.formData,
   });
-  ///
-  final SignFormData formData;
 
   @override
   Widget build(final BuildContext context) {
@@ -102,16 +88,13 @@ class EmailFormField extends StatelessWidget {
   }
 }
 
-///
 class FirsNameFormField extends StatelessWidget {
+  final SignFormData formData;
 
-  ///
   const FirsNameFormField({
     super.key,
     required this.formData,
   });
-  ///
-  final SignFormData formData;
 
   @override
   Widget build(final BuildContext context) {
@@ -146,16 +129,13 @@ class FirsNameFormField extends StatelessWidget {
   }
 }
 
-///
 class SecondNameFormField extends StatelessWidget {
+  final SignFormData formData;
 
-  ///
   const SecondNameFormField({
     super.key,
     required this.formData,
   });
-  ///
-  final SignFormData formData;
 
   @override
   Widget build(final BuildContext context) {
@@ -190,16 +170,13 @@ class SecondNameFormField extends StatelessWidget {
   }
 }
 
-///
 class PhoneFormField extends StatelessWidget {
+  final SignFormData formData;
 
-  ///
   const PhoneFormField({
     super.key,
     required this.formData,
   });
-  ///
-  final SignFormData formData;
 
   @override
   Widget build(final BuildContext context) {
@@ -235,16 +212,13 @@ class PhoneFormField extends StatelessWidget {
   }
 }
 
-///
 class AddressFormField extends StatelessWidget {
+  final SignFormData formData;
 
-  ///
   const AddressFormField({
     super.key,
     required this.formData,
   });
-  ///
-  final SignFormData formData;
 
   @override
   Widget build(final BuildContext context) {

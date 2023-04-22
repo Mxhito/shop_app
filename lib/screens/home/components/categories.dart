@@ -4,7 +4,6 @@ import '../../../size_config.dart';
 
 /// Categories of goods
 class Categories extends StatelessWidget {
-  ///
   const Categories({super.key});
 
   @override
@@ -38,18 +37,11 @@ class Categories extends StatelessWidget {
   }
 }
 
-///
 class CategoryCard extends StatelessWidget {
-  ///
   final String icon;
-
-  ///
   final String text;
-
-  ///
   final GestureTapCallback press;
 
-  ///
   const CategoryCard({
     super.key,
     required this.icon,

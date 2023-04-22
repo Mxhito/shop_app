@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../size_config.dart';
 
-/// Custom suffix icon
 class CustomSuffixIcon extends StatelessWidget {
   /// Icon of text form
   final String svgIcon;
 
-  /// Constructor
   const CustomSuffixIcon({super.key, required this.svgIcon});
 
   @override

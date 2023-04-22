@@ -3,18 +3,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
-/// Button with notification counter
 class IconButtonWithCounter extends StatelessWidget {
-  ///
   final String svgSrc;
-
-  ///
   final int numOfItems;
-
-  ///
   final GestureTapCallback press;
 
-  ///
   const IconButtonWithCounter({
     super.key,
     required this.svgSrc,

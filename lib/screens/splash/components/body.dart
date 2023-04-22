@@ -8,7 +8,6 @@ import 'splash_content.dart';
 
 /// Body of the Splash Screen
 class Body extends StatefulWidget {
-  /// Constructor
   const Body({super.key});
 
   @override
@@ -101,13 +100,9 @@ class _BodyState extends State<Body> {
 
 /// Dot for a page indicator
 class Dot extends StatelessWidget {
-  /// Index of dot
   final int index;
-
-  /// Status of dot
   final bool isActive;
 
-  /// Constructor
   const Dot({
     super.key,
     required this.index,

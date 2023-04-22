@@ -8,7 +8,6 @@ import 'sign_form.dart';
 
 /// Body of the Sign In screen
 class Body extends StatelessWidget {
-  /// Constructor
   const Body({super.key});
 
   @override
@@ -34,7 +33,8 @@ class Body extends StatelessWidget {
                   ),
                 ),
                 const Text(
-                  'Sign in with your email and password \n' 'or continue with social media',
+                  'Sign in with your email and password \n'
+                  'or continue with social media',
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),

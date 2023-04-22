@@ -7,7 +7,6 @@ import 'complit_profile_form.dart';
 
 /// Body of Complit Profile screen
 class Body extends StatelessWidget {
-  /// Construct
   const Body({super.key});
 
   @override

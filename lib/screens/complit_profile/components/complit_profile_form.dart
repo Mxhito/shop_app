@@ -8,9 +8,7 @@ import '../../../size_config.dart';
 import '../../otp/otp_screen.dart';
 import '../../sign_in/components/sign_form.dart';
 
-/// Complit Profile form
 class ComplitProfileForm extends StatefulWidget {
-  /// Constructor
   const ComplitProfileForm({super.key});
 
   @override

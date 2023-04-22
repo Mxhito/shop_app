@@ -4,18 +4,11 @@ import '../../../constants.dart';
 import '../../../models/product.dart';
 import '../../../size_config.dart';
 
-///
 class ProductCard extends StatelessWidget {
-  ///
   final double width;
-
-  ///
   final double aspectRatio;
-
-  ///
   final Product product;
 
-  ///
   const ProductCard({
     super.key,
     this.width = 140,

@@ -16,7 +16,6 @@ void main() {
 
 /// This widget is the root of my application
 class Main extends StatelessWidget {
-  /// Constructor
   const Main({super.key});
 
   @override
