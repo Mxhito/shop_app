@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../models/product.dart';
 import '../../../size_config.dart';
+import '../../details/details_screen.dart';
 import 'product_card.dart';
 import 'section_title.dart';
 
@@ -27,6 +28,12 @@ class PopularProducts extends StatelessWidget {
                 demoProducts.length,
                 (final index) => ProductCard(
                   product: demoProducts[index],
+                  press: () => Navigator.pushNamed(
+                    context,
+                    DetailsScreen.routeName,
+                    arguments:
+                        ProductDetailsArgument(product: demoProducts[index]),
+                  ),
                 ),
               ),
             ],
